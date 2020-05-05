@@ -9,7 +9,7 @@
 
     export default {
         name: 'app',
-        components: {index}
+        components: {index},
     }
 </script>
 

@@ -12,6 +12,7 @@ fs.open('./src/environment/nodeEnv.js', 'w', function (err, fd) {
     currentMode: '${process.env.VUE_APP_CURRENTMODE}',
     currentModeName: '${process.env.VUE_APP_CURRENTMODE}',
     currentModeChName: '${process.env.VUE_APP_CURRENTMODE}'
+    requestMethod: 'axios'
 };`;
     fs.write(fd, buf, 0, buf.length, 0);
 });
@@ -22,7 +23,7 @@ module.exports = {
     outputDir: process.env.outputDir,
     productionSourceMap: false,
     filenameHashing: false,
-	devServer: {
+    devServer: {
         port: 1024,
         host: 'localhost',
         https: false,
