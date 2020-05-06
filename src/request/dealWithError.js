@@ -6,7 +6,8 @@
 export const dealWithError = error => {
     let errorMessage = {}
     errorMessage.success = false;
-    let status = error.code ? error.code : error.response.status;
+    let status = 400;
+    console.log(400,error)
     switch (status) {
         case 400:
             errorMessage.data = '请求错误.';

@@ -6,7 +6,7 @@
 import {nodeEnv} from "@/environment/nodeEnv";
 
 // 获取当前运行环境
-const environment = nodeEnv.environment
+const environment = nodeEnv.nodeEnv
 
 // 运行环境【运行后台人员联调环境】----【运行：npm run dev】
 const development = {

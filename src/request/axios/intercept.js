@@ -15,11 +15,11 @@ const intercept = Axios;
  * @param: {Object}[config]发起请求时的一系列参数
  * @returns: {Object}接口请求拦截器添加之后返回的参数
  */
-sptors.request.use((config) => {
+intercept.interceptors.request.use((config) => {
     config.headers['author'] = "maxiaoqu.com";
-    // 判断是否是登录页，是的话不需要
-    if (!config.url.includes('/login')) {
-        config.headers['Authorization'] = '登录用户token';
+    // 除了登陆页和注册页，其他页面都需要携带token
+    if (!config.url.includes('/login') || !config.url.includes('/register')) {
+        config.headers['Authorization'] = 'user token';
     }
     // 判断是否是json文件，是的话baseURL为空
     if (config.url.includes('.json') || config.url.includes('.g')) {
