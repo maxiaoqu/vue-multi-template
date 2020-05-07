@@ -1,23 +1,23 @@
-import {comRequestData} from "@/request";
+import {comRequestData, comRequestFile} from "@/request";
 
-// 获取地市编码（正常的6位数编码）
+// 回去数据
 export const getRegion = (param) => {
     let params = param ? param : {};
     const config = {
-        url: '/zjServe/getRegion.do',
+        url: '/zjServe/getRegion11.do',
         data: params,
         method: 'get'
     };
     return comRequestData(config);
 };
 
-// 获取地市编码（转换成5位数）
-export const getOwnerToHyCode = (param) => {
+// 文件上传
+export const getOwnerToHyCode = (param,filePath) => {
     let params = param ? param : {};
     const config = {
-        url: '/zjzjServe/getOwnerToHyCode.do',
+        url: '/zjServe/getRegion12.do',
         data: params,
         method: 'get'
     };
-    return comRequestData(config);
+    return comRequestFile(config,filePath);
 };

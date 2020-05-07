@@ -1,15 +1,17 @@
 <template>
     <div id="app">
-        <index></index>
+        <todoComRequest></todoComRequest>
+        <todoSigRequest></todoSigRequest>
     </div>
 </template>
 
 <script>
-    import index from './views/index'
+    import todoComRequest from './views/request/todoComRequest';
+    import todoSigRequest from './views/request/todoSigRequest';
 
     export default {
         name: 'app',
-        components: {index},
+        components: {todoComRequest,todoSigRequest},
     }
 </script>
 

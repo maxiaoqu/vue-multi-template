@@ -1,5 +1,5 @@
 /**
- * @author maxiaoqu(码小趣：maxiaoqu@163.com)
+ * @author maxiaoqu(码小趣：maxiaoqu@vip.qq.com)
  * @since 2019-08-20
  * @description 适用于任何环境下的axios请求框架
  */
